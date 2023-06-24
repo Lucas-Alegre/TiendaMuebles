@@ -1,0 +1,342 @@
+/*Estilos globales*/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*1Rem= 10 px*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0%;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display SC", serif;
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(97, 182, 23);
+  display: block;
+  padding: 1rem;
+  transition: 0.2s;
+  text-align: center;
+  border: none;
+}
+.btn:hover {
+  background-color: rgb(67, 127, 14);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.max-whith-30 {
+  max-width: 30rem;
+}
+/*Fin Estilos Globales*/
+
+/*Utilidades*/
+.text-center {
+  text-align: center;
+}
+/*Fin utilidades*/
+
+/*Heading, nav, imagen Central*/
+#nombre-sitio {
+  color: #000000;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+#nombre-sitio span {
+  color: #037bc0;
+}
+
+.nav-contenedor {
+  border-top: 1px solid #373232;
+}
+
+.nav-principal {
+  padding: 2rem 0 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 100rem;
+  /*Centra un container*/
+  margin: 0 auto 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.hero {
+  background-image: url(../image/Img/principal.jpg);
+  height: 40rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/*Fin heading, nav, imagen Central*/
+
+/*Section categorias*/
+.listado-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.categorias h2 {
+  text-align: center;
+}
+
+.categorias a {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  transition: 0.2s;
+}
+
+.categorias a:hover {
+  transition: 0.2s;
+  color: white;
+  background-color: #0769a2;
+}
+/*Fin categorias*/
+
+/*Bloque Nosotros*/
+.sobre-nosotros {
+  background-image: linear-gradient(
+      to right,
+      transparent 50%,
+      #0769a2 50%,
+      #0769a2 100%
+    ),
+    url("../image/Img/nosotros.jpg");
+  background-position: left center;
+  padding: 8rem 0;
+  background-repeat: no-repeat;
+  background-size: 100, 100rem;
+}
+.contenedor-sobre-nosotros {
+  display: flex;
+  justify-content: flex-end;
+}
+.texto-nosotros {
+  flex-basis: 50%;
+  padding-left: 10rem;
+  color: aliceblue;
+}
+/*Fin Nosotros*/
+
+/*Productos*/
+.contenido-principal {
+  margin-top: 5rem;
+}
+.producto {
+  background-color: #037bc0;
+}
+.texto-producto {
+  text-align: center;
+  color: rgb(249, 247, 247);
+  padding: 2.5rem;
+}
+.texto-producto .precio {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+.texto-producto h3 {
+  margin: 0;
+}
+.texto-producto p {
+  margin: 0 0 0.5rem 0;
+}
+.listado-productos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.producto:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.producto:nth-child(1) img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+.producto:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.producto:nth-child(3) {
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+.producto:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.producto:nth-child(5) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.producto:nth-child(6) {
+  grid-column-start: 5;
+  grid-column-end: 7;
+}
+/*Fin Produtos*/
+
+/*Footer*/
+.site-footer {
+  border-top: 1px solid rgb(0, 0, 0);
+  margin-top: 5rem;
+  padding: 5rem;
+}
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.grid-footer h3 {
+  margin: 0;
+}
+.grid-footer a {
+  display: block;
+}
+.copyright {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/*Pagina Nosotros*/
+.contenido-nosotros {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 4rem;
+}
+.informacion-nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Pagina Blogs*/
+.contenedor-blog {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.entrada {
+  border-bottom: 2px solid #000000;
+  padding-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+/*Esto elimina la ultima linea de blog*/
+.entrada:last-of-type {
+  border: none;
+}
+.entrada-meta {
+  display: flex;
+  justify-content: space-between;
+}
+.entrada-meta p {
+  font-weight: bold;
+}
+.entrada-meta span {
+  color: #037bc0;
+}
+
+/*Paginada entrada de Blogs*/
+.contenido-entrada-blog {
+  width: 60rem;
+  margin: 0 auto;
+}
+.contenido-entrada-blog h2 {
+  text-align: center;
+}
+
+/*Pagina Galeria*/
+.galeria {
+  list-style: none;
+  padding: 0%;
+  margin: 0%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.galeria img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+}
+
+/*Pagina Contacto*/
+.formulario {
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+.formulario fieldset {
+  border: 1px solid black;
+  margin-bottom: 2rem;
+}
+.formulario legend {
+  background-color: #064c76;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+.campo {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.campo label {
+  flex-basis: 10rem;
+}
+.campo .input {
+  flex: 1;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+}
+.input-buttom{
+  width: 40%;
+}
